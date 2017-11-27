@@ -1,0 +1,29 @@
+/* Global Variables */
+:root {
+    --black: #14171a;
+    --teal: #45C8FE;
+    --light-blue: #5DA9FF;
+    --blue: #6D95FF;
+    --dark-blue: #7E7FFF;
+    --dark-purple: #8E6BFF;
+    --light-purple: #A367FF;
+  }
+  
+a {
+    color: #333;
+}
+
+#myCanvas {
+    position: absolute;
+    z-index: -1;
+}
+
+
+.gradient-bg {
+    background: var(--light-purple); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, var(--teal), var(--light-purple)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, var(--teal), var(--light-purple)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, var(--teal), var(--light-purple)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, var(--teal), var(--light-purple)); /* Standard syntax */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=var(--teal), endColorstr=var(--light-purple),GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  }
