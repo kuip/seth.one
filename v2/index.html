@@ -17,7 +17,7 @@
 
 </head>
   <body>
-      <div id="particles-js">
+      <div id="particles-js" style="width: 100%; height: 500px;">
         <canvas id="myCanvas" class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="3000" height="500"></canvas>
       </div>
     <header>
@@ -178,7 +178,7 @@ custColors.randomSurfaces3 = function(shape, drift = 0.03, sat = 0.5, lit = 0.4)
     while (hue > 1) {
       hue -= 1;
     }
-    results.push(surface.fill(seen.Colors.hsl(hue, 0.005, 0.04)));
+    results.push(surface.fill(seen.Colors.hsl(hue, 0.05, 0.08)));
   }
   return results;
 }
@@ -200,16 +200,19 @@ patch_height = height * 1.5;
 // Create patch of triangles that spans the view
 shape = seen.Shapes.patch(patch_width / triangleScale / equilateralAltitude, patch_height / triangleScale).scale(triangleScale).translate(-patch_width / 2, -patch_height / 2 + 80).rotx(-0.3);
 
-custColors.randomSurfaces3(shape,0.003, 0.005, 0.004); // drift , sat, lit
 
-shape2 = seen.Shapes.sphere(2).scale(150);
+//seen.Colors.randomSurfaces2(shape);
 
-seen.Colors.randomSurfaces2(shape2);
+custColors.randomSurfaces3(shape,0.03, 0.05, 0.4); // drift , sat, lit
+
+// shape2 = seen.Shapes.sphere(2).scale(550);
+
+// seen.Colors.randomSurfaces2(shape2);
 
 // Create scene and render context
 scene = new seen.Scene({
-  model: seen.Models.default().add(shape2),
-  cullBackfaces: false,
+  model: seen.Models.default().add(shape),
+  //cullBackfaces: false,
   viewport: seen.Viewports.center(width, height)
 });
 
@@ -239,7 +242,7 @@ context.animate().onBefore(function(t) {
 }).start();
 
 //////
-
+/*
 
 ref = shape2.surfaces;
 // Create a copy of the surface points so we can manipulate them later
@@ -287,7 +290,7 @@ dragger.on('drag.rotate', function(e) {
   return context.render();
 });
 
-
+*/
 </script>
 
   </body>
