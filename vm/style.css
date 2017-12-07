@@ -1,194 +1,129 @@
-/* css Zen Garden default style v1.02 */
-/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
-
-/* This file based on 'Tranquille' by Dave Shea */
-/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
-/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
-
-/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
-
-
-/* basic elements */
 html {
-	margin: 0;
-	padding: 0;
+	margin : 0;
+	padding : 0;
 	}
-body { 
-	font: 75% georgia, sans-serif;
-	line-height: 1.88889;
-	color: #555753; 
-	background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right; 
-	margin: 0; 
-	padding: 0;
+	body {
+	font : 75% georgia, sans-serif;
+	line-height : 1.88889;
+	color : #555753;
+	background : url(https://upload.wikimedia.org/wikipedia/en/7/7d/Duerer_praying_hands.jpg) top right no-repeat;
+	margin-right: 160px;
+	padding : 0;
 	}
-p { 
-	margin-top: 0; 
-	text-align: justify;
+	h1 {
+		font-size: 33px;
+		margin-left: 260px;
 	}
-h3 { 
-	font: italic normal 1.4em georgia, sans-serif;
-	letter-spacing: 1px; 
-	margin-bottom: 0; 
-	color: #7D775C;
+	p {
+	margin-top : 0;
+	text-align : justify;
 	}
-a:link { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #B7A5DF;
+	h3 {
+	font : 1.4em normal normal 1.4em georgia, sans-serif;
+	letter-spacing : 1px;
+	margin-bottom : 0;
+	color : #7D775C;
 	}
-a:visited { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #D4CDDC;
+	a:link {
+	font-weight : bold;
+	text-decoration : none;
+	color : #B7A5DF;
 	}
-a:hover, a:focus, a:active { 
-	text-decoration: underline; 
-	color: #9685BA;
+	a:visited {
+	font-weight : bold;
+	text-decoration : none;
+	color : #D4CDDC;
 	}
-abbr {
-	border-bottom: none;
+	a:hover, a:focus, a:active {
+	text-decoration : underline;
+	color : #9685BA;
 	}
-
-
-/* specific divs */
-.page-wrapper { 
-	background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left; 
-	padding: 0 175px 0 110px;  
-	margin: 0; 
-	position: relative;
+	abbr {
+	border-bottom : none;
 	}
-
-.intro { 
-	min-width: 470px;
-	width: 100%;
+	.page-wrapper {
+	background : url(data:image/jpeg;base64,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) top left no-repeat;
+	padding : 0 175px 0 110px;
+	margin : 0;
+	position : relative;
 	}
-
-header h1 { 
-	background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
-	margin-top: 10px;
-	display: block;
-	width: 219px;
-	height: 87px;
-	float: left;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
+	.intro {
+	min-width : 470px;
+	width : 100%;
 	}
-header h2 { 
-	background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left; 
-	margin-top: 58px; 
-	margin-bottom: 40px; 
-	width: 200px; 
-	height: 18px; 
-	float: right;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	} 
-header {
-	padding-top: 20px;
-	height: 87px;
-}
-
-.summary {
-	clear: both; 
-	margin: 20px 20px 20px 10px; 
-	width: 160px; 
-	float: left;
+	
+	
+	header {
+	padding-top : 30px;
+	height : 87px;
 	}
-.summary p {
-	font: italic 1.1em/2.2 georgia; 
-	text-align: center;
+	.summary {
+	clear : both;
+	margin : 80px 20px 20px 10px;
+	width : 160px;
+	float : left;
 	}
-
-.preamble {
-	clear: right; 
-	padding: 0px 10px 0 10px;
+	.summary p {
+	font : 1.1em 1.1em/2.2 georgia;
+	text-align : center;
 	}
-.supporting {	
-	padding-left: 10px; 
-	margin-bottom: 40px;
+	.preamble {
+	clear : right;
+	padding : 0 10px 0 10px;
 	}
-
-footer { 
-	text-align: center; 
+	.supporting {
+	padding-left : 10px;
+	margin-bottom : 40px;
 	}
-footer a:link, footer a:visited { 
-	margin-right: 20px; 
+	footer {
+	text-align : center;
 	}
-
-.sidebar {
-	margin-left: 600px; 
-	position: absolute; 
-	top: 0; 
-	right: 0;
+	footer a:link, footer a:visited {
+	margin-right : 20px;
 	}
-.sidebar .wrapper { 
-	font: 10px verdana, sans-serif; 
-	background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y; 
-	padding: 10px; 
-	margin-top: 150px; 
-	width: 130px; 
+	.sidebar {
+	margin-left : 600px;
+	position : absolute;
+	top : 0;
+	right : 0;
 	}
-.sidebar h3.select { 
-	background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left; 
-	margin: 10px 0 5px 0; 
-	width: 97px; 
-	height: 16px; 
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
+	
+	.sidebar h3.select {
+	background : url(http://csszengarden.com/001/h3.gif) top left no-repeat transparent;
+	margin : 10px 0 5px 0;
+	width : 97px;
+	height : 16px;
+	text-indent : 100%;
+	white-space : nowrap;
+	overflow : hidden;
 	}
-.sidebar h3.archives { 
-	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:57px; 
-	height: 14px; 
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
+	.sidebar h3.archives {
+	background : url(http://csszengarden.com/001/h5.gif) top left no-repeat transparent;
+	margin : 25px 0 5px 0;
+	width : 57px;
+	height : 14px;
+	text-indent : 100%;
+	white-space : nowrap;
+	overflow : hidden;
 	}
-.sidebar h3.resources { 
-	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:63px; 
-	height: 10px; 
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
+	.sidebar h3.resources {
+	background : url(http://csszengarden.com/001/h6.gif) top left no-repeat transparent;
+	margin : 25px 0 5px 0;
+	width : 63px;
+	height : 10px;
+	text-indent : 100%;
+	white-space : nowrap;
+	overflow : hidden;
 	}
-
-
-.sidebar ul {
-	margin: 0;
-	padding: 0;
+	.sidebar ul {
+	margin : 0;
+	padding : 0;
 	}
-.sidebar li {
-	line-height: 1.3em; 
-	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center; 
-	display: block; 
-	padding-top: 5px; 
-	margin-bottom: 5px;
-	list-style-type: none;
+	
+	.sidebar li a:link {
+	color : #988F5E;
 	}
-.sidebar li a:link {
-	color: #988F5E;
+	.sidebar li a:visited {
+	color : #B3AE94;
 	}
-.sidebar li a:visited {
-	color: #B3AE94;
-	}
-
-
-.extra1 {
-	background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat; 
-	position: absolute; 
-	top: 40px; 
-	right: 0; 
-	width: 148px; 
-	height: 110px;
-	}
+	
